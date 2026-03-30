@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#64635b",
+              "on-surface-variant": "#46464c",
+              "surface-container-low": "#f4f3f1",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#8689a0",
+              "tertiary-container": "#1a242f",
+              "surface-container": "#efeeec",
+              "inverse-primary": "#c2c5de",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dee1fb",
+              "outline-variant": "#c7c5cd",
+              "on-secondary-fixed": "#1c1c16",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#d9e3f3",
+              "surface-container-high": "#e9e8e6",
+              "outline": "#77767d",
+              "secondary-fixed": "#e6e2d9",
+              "inverse-on-surface": "#f1f1ef",
+              "error": "#ba1a1a",
+              "tertiary": "#050e19",
+              "tertiary-fixed-dim": "#bdc7d7",
+              "on-tertiary-container": "#818b99",
+              "on-primary-fixed-variant": "#42465a",
+              "inverse-surface": "#2f3130",
+              "surface-variant": "#e3e2e0",
+              "on-background": "#1a1c1b",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#484740",
+              "background": "#faf9f7",
+              "secondary": "#605e57",
+              "on-primary-fixed": "#161b2d",
+              "surface-container-highest": "#e3e2e0",
+              "on-surface": "#1a1c1b",
+              "surface-tint": "#595d73",
+              "surface-dim": "#dadad8",
+              "primary-container": "#1e2235",
+              "secondary-container": "#e3dfd6",
+              "primary": "#080c1e",
+              "on-tertiary-fixed-variant": "#3e4854",
+              "surface": "#faf9f7",
+              "surface-bright": "#faf9f7",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#cac6be",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#121c27",
+              "primary-fixed-dim": "#c2c5de"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
+  <div class="flex justify-between items-center px-6 md:px-10 py-5 max-w-[1400px] mx-auto">
+    <!-- Left: Logo & Wordmark -->
+    <a href="index.html" class="flex items-center gap-3 md:gap-4 text-[#1a1c29] hover:opacity-80 transition-opacity">
+      <div class="flex flex-col items-center justify-center -mt-1 opacity-80 scale-90 md:scale-100">
+        <span class="material-symbols-outlined text-[16px] leading-none mb-[1px]">park</span>
+        <span class="font-serif text-[6px] font-bold tracking-[0.2em] leading-none">MORLA</span>
+        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFÃƒâ€°</span>
+      </div>
+      <span class="font-serif text-xl md:text-2xl font-bold tracking-widest leading-none uppercase">MORLA</span>
+    </a>
+
+    <!-- Center Links (Desktop) -->
+    <div class="hidden md:flex items-center space-x-10">
+      <a href="index.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">HOME</a>
+      <a href="menu.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">MENU</a>
+      <a href="about.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">THE STORY</a>
+      <a href="gallery.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors text-slate-800 border-b border-slate-800 pb-1">GALLERY</a>
+    </div>
+
+    <!-- Right Button (Desktop) / Hamburger (Mobile) -->
+    <div class="flex items-center gap-4">
+      <button onclick="window.location.href='index.html#contact'" class="hidden md:block px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
+        CONTACT US
+      </button>
+      
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-slate-700 hover:bg-slate-50 rounded-lg transition-colors">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="flex flex-col h-full bg-slate-50 p-8 pt-24 space-y-8">
+      <button id="close-menu-button" class="absolute top-6 right-8 p-2 text-slate-700 hover:bg-white rounded-lg">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      
+      <a href="index.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">HOME</a>
+      <a href="menu.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">MENU</a>
+      <a href="about.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">THE STORY</a>
+      <a href="gallery.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 text-slate-900 border-b-4 border-slate-900">GALLERY</a>
+      
+      <button onclick="toggleMenu(); window.location.href='index.html#contact'" class="mt-8 bg-[#1E2235] text-white py-5 rounded-full text-xs font-bold tracking-[0.2em] uppercase shadow-xl">
+        CONTACT US
+      </button>
+      
+      <div class="mt-auto pb-12 flex justify-center gap-8 text-slate-400">
+        <span class="material-symbols-outlined">share</span>
+        <span class="material-symbols-outlined">mail</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const closeBtn = document.getElementById('close-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        setTimeout(() => menu.classList.remove('translate-x-full'), 10);
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    
+    // Close menu on link click
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Editorial Header -->
+<section class="mb-20 text-center md:text-left">
+<h1 class="font-headline text-4xl md:text-7xl lg:text-8xl text-primary mb-6 tracking-tight">Curation of Moments</h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<p class="font-body text-lg text-secondary max-w-xl leading-relaxed">
+Explore the visual tapestry of Morla Café—where Mediterranean warmth meets coastal serenity in every poured cup and shared conversation.
+                </p>
+<div class="flex gap-4">
+<span class="font-label uppercase tracking-[0.2em] text-xs text-on-secondary-container">#MORLACAFE</span>
+<span class="font-label uppercase tracking-[0.2em] text-xs text-on-secondary-container">COASTAL LIVING</span>
+</div>
+</div>
+</section>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+<!-- Item 1: Large Image -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a minimalist latte art on a ceramic cup on a white marble table with soft window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz4mUIPqiJZKF5qR0OCqsjq30MpAfEz540QRFeQaqc8RvBPK5E3_oTAbSE2867iSZy9Sio9Em0ngtFwbKlar5m6PDiSC7NSP64wSi1oVgwI1aafkhrFdRGDgIEG2CjNXRzehwNyqfBAiNyOksADI4wsst4suaQEnQgLTHDjkdsrfIlFIHy2DJ5aXkDJXWHEfMV5pd6FQQVB2Y8mnqLOg7YgRPN_12dDLRc5seozI3Huzj_XR_izl79bGKiGkeqmm62OG4SjccUMcKJ"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior of a high-end cafe with light wood furniture, white walls, and large arched windows with sunlight streaming in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDikXEQgAZc08a-K6rgvqJZduF_AyrBi6N0Ivf4B5iMrcZHtkinvYWRFziq1HMaE12xrfk7mZpdIUHDpif87IxYnMkDoAeBbS_JVMUjxWQRx6c7OQVQfbvGh1dkH3dXeVTuuzfae8XZM0bIVA2gv7GLrsKui7SrEnhIAnoiNkTGgH1RjArQz3aNaQdHYRNhASdlRWTTsgC6AV0Psl0nAIMGBmpLIs0o7Tf8qz8aEcBrg3l9wEf-rdxAzyLumzTwpaZ2aTqWTwrkV2dd"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Candid shot of people laughing and enjoying coffee in a sun-drenched cafe courtyard with olive trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbw46ccQMAZLBvkLiGMydswTGwKrw7OMiIJBmYDFytUuKt2569_V1kqRvrvnE0YZQ7R626xtrmJpQEg_7dfAfPO8VQko8ZMIFf5uDzJRrpKNHpoNqJmIrrAMzgkqUIoC_6z4kZp46EPQN_JqqvmQ_2i9WNKoePooXfjRzUUGbvyAGtdlEEwnP6jKy_Og6drp8xQ2JfY2EfNsCqU-7kVn0WMoe5zTiYqMnia9NwAWB2dWAwBR96aZMBVrmco8Katvx06xH1MGGBvS3j"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of artisan pastry on a minimalist linen napkin with a golden espresso spoon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUH4fY6Zy8A6n_ED6TE4yibu7i5C4v8OYKQYBlqtWbXugJsJGwG3ZUIJZ6KXKUVWNKiXsCk5i3cUEUQONLEsEj5BUh-UzFSVGN7umoWKtE0w1BVIs_PSplrmk6hyCO0cB82eBCgItptsNmjeU_1n817zX2i5m6GOaIfFsgkZG25ZIMm4FCXOxgETkv272WnagreP4hUy_aIFXw29JlI4ZDtNl9CLHG8WBHLA3lm0nr4gJDiowBc7fpm_z2KGl-UTqeHFv6SLR2m3AA"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Barista carefully pouring water over coffee grounds in a glass chemex with morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpieoYVUeEX_yyAj4Qmf4k-Xznc3aidbf3V0g2KbiuURwE7SoISpVga4WOeJl7YFHNhnjRfmNFI6rjXp2gjkGJRHbpekc6tmSWAU3NYr0nk_Fy-BjbmoTmrFO5bDTCJDdQ9wEIp9HFumLzKGS3BLQhfqcBn51wvwNWn87j4ST36RMlt5mCELbYwTpnLIh--JlkHgpYFtiJAb2Qn2WHboL_Gza2-C7jq_7fdqY8QwTTivjYYqBWOuPAprNq4CIaeSCrV5bOBwH3exX7"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Overhead view of several small coffee cups and saucers on a rustic wooden table with scattered beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf9QBrJCvNrjQkYuDib8R16S4SI86EdCTJsFeNJzT_p6CnUVcvJDNqXJ09lfksvI8t0AmoXJBJdAZjbgjHCSZbVqlMBKvftEjV-BJwW32FtMQdajBMuS5RHdXD1tJwcVjDlwLmQVzbJj9m2dFC95qWbNl6TgRj_vH6YJp55e35XdPF4rUKhaRrJ0G6fOt0Nz5QMTvX8B6hP7K9Epx4NzTp3X0rAXB3rhxIA0C_VnJ8WZu_YebRiZFW7I3s_rjAsp7KXqzeR2Uyyy4A"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Soft focused view of a coastal cafe terrace overlooking the turquoise ocean at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVzZQOWN2YwvUpk_gAo0u3zWOEIG2CSEiSHx6T23ZZprGLXqQzYm9SLyBxPuv7ta3Adgr-Ta1x5rnMWEqbHUHQj5aY8AGbI9bXfVaRPQjaq_YOPE8JPiyWXSI7AfDpxQlWBlRR-CgczWntRRlfA-mdN78pSvz-uBPGoa1cHuDtuebvGDwfairvdvFtA8tFZ0P8ofBNzvSFGJpusSWic1uSL9lkF7v8MAor4XvGLe0lll7fqJPbnZkMbjDlwthX-Jmyjej8-fweTl7C"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 8 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior architectural shot of a cafe bar counter made of smooth limestone with warm overhead lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-zOAvRuDzhqkiwVL59WD2E_suWQGuyMumnKi4vbK4tL8T7Bs6xzoXEUwzQwyPzWsOD6WQ5AhRk-ez3yQ4SttAkhnwqrusAUeYghLv83p4FDBuziaNqfpcpuGbp6tO5bVhayVHZjFXFHIKrAxYmBRjHTJdilF496Tt_oAhY5YK9zNC6bC3yf3FLCHm-HKgjclE8910_nNmKi3EGKnOPOKvEr--y6JUWoGXsriyMl9F8R9X90WV9BUwCu1ZCCtFCTqeJmvrrNcT_Wp0"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+<!-- Item 9 -->
+<div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Detailed shot of cold brew coffee being poured into a tall glass with swirling ice cubes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPnAXVEc2koiDOQcgg0vUlGceBiAP19fGYQtesfu2pOGBr5qflMAf2_GYEAqmsddYWphQn9Y1zSnAWd40Czi4bYqHL6dmJdhIltvGsy6p00CCFbdiiurADL9A7owon3iL-udwd8QWpuxK00LeG1VK7kwAB1EJoTAcmfin04KdcR9puNNzbzkcc4xOJiT-LTAjEq9F9hqK_IHWsWZwgWyy7ogN0S0RkVBV7a6EutQWov34Ad7LAgBlQGvRW4WCK8ozi9WmNlfo7l7ju"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">favorite</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Load More Section -->
+<section class="mt-32 flex flex-col md:flex-row items-center gap-12 bg-surface-container-low p-12 rounded-xl">
+<div class="flex-1">
+<h3 class="font-headline text-3xl text-primary mb-4">The Collection Continues</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                    Our digital archive is constantly evolving. Follow our journey for daily inspiration and a behind-the-scenes look at the craftsmanship that defines the Morla experience.
+                </p>
+<button class="bg-primary text-white font-label tracking-[0.1em] text-xs px-6 md:px-8 py-4 rounded-md uppercase hover:opacity-90 transition-opacity">
+                    Follow on Instagram
+                </button>
+</div>
+<div class="w-full md:w-1/3 aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Person holding a phone and taking a photo of a perfectly served morning breakfast in a cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM6fiRlPfJuqeJ6MnhUBUPqlfpTKbYxClb4l4TjP_XZw80XImX0NLjgPf4G35Ez-RRPcmHuvF6gaSOJdq5wvIoYXkBJnqMk-guf4_P7brZS1YueBto61sX_xii0rKqsb77xjvmUN_5CbZjz8QijYUIrjkfDbshCK0ZriA6sTsIM2nMn4pfbmfbO0fzmiuHg5DEL6IYUzWYzDWRe5eePaFzQ9k-G-ZrmQGz0xvD3JTSzcYYXhtsjkG6ZE6idHqUp0RDWQiGhOltSnJ1"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f3f1] dark:bg-slate-900 w-full py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <!-- Subtle Brand Background -->
+        <span class="text-3xl md:text-5xl font-serif font-black text-[#1E2235]/10 dark:text-white/5 uppercase tracking-[0.2em] mb-10 block text-center select-none">MORLA</span>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center gap-10 mb-10 text-[#1E2235]/60">
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="Instagram">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="TikTok">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.617a8.171 8.171 0 0 0 3.77 1.15V6.326a4.809 4.809 0 0 1-.001.36z"/></svg>
+            </a>
+            <a href="mailto:hello@morla-cafe.com" class="hover:text-[#1E2235] transition-colors" title="Email">
+                <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+        </div>
+
+        <p class="font-serif text-[10px] tracking-[0.25em] uppercase text-[#1E2235]/40 dark:text-slate-500">Â© 2024 MORLA CAFÃ‰. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+</body></html>
+
+
+
+
+
+
+

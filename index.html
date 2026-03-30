@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#64635b",
+              "on-surface-variant": "#46464c",
+              "surface-container-low": "#f4f3f1",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#8689a0",
+              "tertiary-container": "#1a242f",
+              "surface-container": "#efeeec",
+              "inverse-primary": "#c2c5de",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dee1fb",
+              "outline-variant": "#c7c5cd",
+              "on-secondary-fixed": "#1c1c16",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#d9e3f3",
+              "surface-container-high": "#e9e8e6",
+              "outline": "#77767d",
+              "secondary-fixed": "#e6e2d9",
+              "inverse-on-surface": "#f1f1ef",
+              "error": "#ba1a1a",
+              "tertiary": "#050e19",
+              "tertiary-fixed-dim": "#bdc7d7",
+              "on-tertiary-container": "#818b99",
+              "on-primary-fixed-variant": "#42465a",
+              "inverse-surface": "#2f3130",
+              "surface-variant": "#e3e2e0",
+              "on-background": "#1a1c1b",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#484740",
+              "background": "#faf9f7",
+              "secondary": "#605e57",
+              "on-primary-fixed": "#161b2d",
+              "surface-container-highest": "#e3e2e0",
+              "on-surface": "#1a1c1b",
+              "surface-tint": "#595d73",
+              "surface-dim": "#dadad8",
+              "primary-container": "#1e2235",
+              "secondary-container": "#e3dfd6",
+              "primary": "#080c1e",
+              "on-tertiary-fixed-variant": "#3e4854",
+              "surface": "#faf9f7",
+              "surface-bright": "#faf9f7",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#cac6be",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#121c27",
+              "primary-fixed-dim": "#c2c5de"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 40px -10px rgba(26, 28, 27, 0.04);
+        }
+        .text-shadow-subtle {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
+  <div class="flex justify-between items-center px-6 md:px-10 py-5 max-w-[1400px] mx-auto">
+    <!-- Left: Logo & Wordmark -->
+    <a href="index.html" class="flex items-center gap-3 md:gap-4 text-[#1a1c29] hover:opacity-80 transition-opacity">
+      <div class="flex flex-col items-center justify-center -mt-1 opacity-80 scale-90 md:scale-100">
+        <span class="material-symbols-outlined text-[16px] leading-none mb-[1px]">park</span>
+        <span class="font-serif text-[6px] font-bold tracking-[0.2em] leading-none">MORLA</span>
+        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFÃƒâ€°</span>
+      </div>
+      <span class="font-serif text-xl md:text-2xl font-bold tracking-widest leading-none uppercase">MORLA</span>
+    </a>
+
+    <!-- Center Links (Desktop) -->
+    <div class="hidden md:flex items-center space-x-10">
+      <a href="index.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors text-slate-800 border-b border-slate-800 pb-1">HOME</a>
+      <a href="menu.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">MENU</a>
+      <a href="about.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">THE STORY</a>
+      <a href="gallery.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">GALLERY</a>
+    </div>
+
+    <!-- Right Button (Desktop) / Hamburger (Mobile) -->
+    <div class="flex items-center gap-4">
+      <button onclick="window.location.href='index.html#contact'" class="hidden md:block px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
+        CONTACT US
+      </button>
+      
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-slate-700 hover:bg-slate-50 rounded-lg transition-colors">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="flex flex-col h-full bg-slate-50 p-8 pt-24 space-y-8">
+      <button id="close-menu-button" class="absolute top-6 right-8 p-2 text-slate-700 hover:bg-white rounded-lg">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      
+      <a href="index.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 text-slate-900 border-b-4 border-slate-900">HOME</a>
+      <a href="menu.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">MENU</a>
+      <a href="about.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">THE STORY</a>
+      <a href="gallery.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">GALLERY</a>
+      
+      <button onclick="toggleMenu(); window.location.href='index.html#contact'" class="mt-8 bg-[#1E2235] text-white py-5 rounded-full text-xs font-bold tracking-[0.2em] uppercase shadow-xl">
+        CONTACT US
+      </button>
+      
+      <div class="mt-auto pb-12 flex justify-center gap-8 text-slate-400">
+        <span class="material-symbols-outlined">share</span>
+        <span class="material-symbols-outlined">mail</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const closeBtn = document.getElementById('close-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        setTimeout(() => menu.classList.remove('translate-x-full'), 10);
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    
+    // Close menu on link click
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</nav>
+<!-- New Hero Section (Based on Image 19) -->
+<header class="relative pt-32 pb-24 md:pt-48 md:pb-40 px-6 max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-block px-3 py-1 border border-outline-variant rounded-full">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">✨ Established 2024</span>
+</div>
+<h1 class="font-headline text-4xl md:text-7xl lg:text-[5.5rem] text-primary leading-[1.1] font-bold">
+                    Azure Waters,<br/>Artisanal Brews.
+                </h1>
+<p class="font-body text-lg text-on-surface-variant max-w-md leading-relaxed">
+                    Discover a curated coastal escape where the rhythm of the waves meets the art of the perfect pour. Premium beans, locally sourced.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button onclick="window.location.href='#contact'" class="bg-[#1E2235] text-white px-6 md:px-8 py-3.5 rounded-full text-xs font-label uppercase tracking-widest hover:bg-[#2a2f4a] transition-colors shadow-lg">
+                        Contact Us
+                    </button>
+<button onclick="window.location.href='menu.html'" class="bg-white border border-[#1E2235]/10 text-[#1E2235] px-6 md:px-8 py-3.5 rounded-full text-xs font-label uppercase tracking-widest hover:bg-surface-container transition-colors">
+                        Explore Menu
+                    </button>
+</div>
+</div>
+<div class="relative">
+<!-- Main Café Interior Image -->
+<div class="rounded-[2.5rem] overflow-hidden shadow-2xl">
+<img alt="Modern Café interior" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZrJDpuqmJ9P1zQJazRnxC-5i9V7EI3GGxvwna5D1e0p8wIMkfyl91InwzS0r9VXKStyIeLHOm0RSSnwAcfMaDJWG1Rrgf06wy0pO0vba4HnPOjsEUpx0-ytSiBS3ypqLOwmdTYxJJDROjzTagDHjQVGUksGrzYI1HPD5EBzc0-LT4l_oPoG125UxcCZdhvOuOgTbxUnkGhTWAa1bBBUKp6jv9POVj-DGnmquKp4fYltPMqztxFnYPBqz-lIs6FYv9vXnYXq4pEEK"/>
+</div>
+<!-- Inset Latte Image -->
+<div class="absolute -bottom-10 -left-10 w-48 h-48 md:w-56 md:h-56 p-2 bg-white rounded-3xl shadow-xl overflow-hidden hidden sm:block">
+<img alt="Artisan latte" class="w-full h-full object-cover rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC03ueMm-UP4x5ekeQyxbQQd7iN1ZD7ncL8s1-srM7pffLD_PIhYfneXI6fWRxOv0ffRTt9JEqArbI1mwTMU-hsWo8f1Q6Vw4QdLwEJJqJT63urJnKHfRJ417KjrqOPBVxwioWPBIcms2SxV6gEtxa7atY_q6TRN9Gio4wMZEl1dvkKcSc8NID-PVwogsxGoOUuXuOWOzE2B3PAjPVyL82-SPavEkf0on1elpzu4Thck6dEGzAxJasYeaQ5Chz7yQJu_vcNliY-GqcP"/>
+</div>
+<!-- Reserve Table Floating Button -->
+<button onclick="window.location.href='#contact'" class="absolute -bottom-6 right-6 md:right-10 bg-[#1E2235] text-white px-6 py-4 rounded-xl flex items-center gap-3 shadow-2xl hover:bg-[#2a2f4a] transition-all group">
+<span class="material-symbols-outlined text-xl group-hover:rotate-12 transition-transform">chat_bubble</span>
+<span class="text-[10px] font-label uppercase tracking-widest font-semibold">Contact Us</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Short About Blurb -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 md:px-8 grid md:grid-cols-2 gap-16 items-center">
+<div class="relative group">
+<div class="absolute -top-4 -left-4 w-full h-full border border-primary/5 rounded-xl -z-10 group-hover:top-0 group-hover:left-0 transition-all duration-500"></div>
+<img alt="Artisan coffee preparation" class="rounded-xl w-full aspect-[4/5] object-cover editorial-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC03ueMm-UP4x5ekeQyxbQQd7iN1ZD7ncL8s1-srM7pffLD_PIhYfneXI6fWRxOv0ffRTt9JEqArbI1mwTMU-hsWo8f1Q6Vw4QdLwEJJqJT63urJnKHfRJ417KjrqOPBVxwioWPBIcms2SxV6gEtxa7atY_q6TRN9Gio4wMZEl1dvkKcSc8NID-PVwogsxGoOUuXuOWOzE2B3PAjPVyL82-SPavEkf0on1elpzu4Thck6dEGzAxJasYeaQ5Chz7yQJu_vcNliY-GqcP"/>
+</div>
+<div class="space-y-8">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-secondary-container">The Curator's Story</span>
+<h2 class="font-headline text-4xl md:text-5xl text-primary leading-tight">
+                    Where the Tides Meet <br/> Exceptional Taste
+                </h2>
+<p class="font-body text-on-surface-variant leading-relaxed text-lg">
+                    MORLA was born from a desire to blend the serene rhythm of the coast with the sophisticated palette of the city. We believe that coffee is more than a morning ritual—it's an invitation to pause, breathe, and connect with the world around you.
+                </p>
+<a class="inline-block font-label text-xs uppercase tracking-[0.1em] text-primary border-b border-primary/20 pb-1 hover:border-primary transition-colors" href="about.html">
+                    Our Philosophy
+                </a>
+</div>
+</div>
+</section>
+<!-- Featured Drinks (Bento Layout) -->
+<section class="py-32 px-6 md:px-8 max-w-7xl mx-auto">
+<div class="text-center mb-20 space-y-4">
+<h2 class="font-headline text-4xl md:text-5xl text-primary">Seasonal Curations</h2>
+<p class="font-body text-on-surface-variant tracking-wide">Signature blends inspired by the shifting coastal light.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<!-- Main Featured -->
+<div class="md:col-span-7 relative group overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow">
+<img alt="Iced specialty coffee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrw5AZWoDMPD_PHDQ2gj8xBX_2GwC5qxfSptqm-6Mvn-VPMSYjVHQeruaymvrfHEAqCmYVM0UIQE2KJwxDjfnUyQMERdFRZc9igFDHtIgkrV_ltNJEUOUJg1XrclZYjf9J4gB3iICyr6kQfUVnocTj4tIyIxI8_2J2jIVysJdJu5ecO3ZhRj1B_glwTZYYmZRX71JEfMzck_eLzFfVsdPQnRkzlvEZoYXl02OxESps-Ut72Np8OFElau_waaCzC87EIVvMqZ_DFDgd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-8 left-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[10px] uppercase tracking-widest bg-white/20 backdrop-blur-md px-3 py-1 rounded-full">Signature</span>
+<h3 class="font-headline text-3xl mt-4">Sea Salt &amp; Honey Latte</h3>
+<p class="text-white/80 font-light mt-2">Smooth espresso with raw honey and a pinch of Atlantic salt.</p>
+</div>
+</div>
+<div class="md:col-span-5 grid grid-rows-2 gap-6">
+<!-- Secondary 1 -->
+<div class="relative group overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow">
+<img alt="Matcha latte" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeR9VMwtOdjYpO9SBfU9OghvsQ-tbeNW67Mnw2CV8JRhC47ZgcIkdLGR7cj5Y1olh-HfbLm6lAyhI7qkuUYW8_vb8X8Ep9tyS-Q4tIIe2acIdwTbxb8GP-dykT6K5vAsNZc_L6KLk5QSXa-2eb1BNNoHDoLZUDzYBgiTMfSpIKS0G5Lv7gMLtWIkfoxbccCIWkNnqmbd_lIt4jQYMSOMLPF8XZFaKvfiFPA4O5WqB5KsyoTfF-QUhap2qoKH5yjLqz4ttdJTIh-H-D"/>
+<div class="absolute bottom-6 left-6 text-primary">
+<h3 class="font-headline text-2xl">Ceremonial Matcha</h3>
+</div>
+</div>
+<!-- Secondary 2 -->
+<div class="relative group overflow-hidden rounded-xl bg-surface-container-lowest editorial-shadow">
+<img alt="Cold brew bottle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG1nGDbBEWgKLOO1FjdUvC_OJbxCUKE75JIv_geOjIEQMvcONXNw2lMaihaQYYb_lWciBuDeKmfeakByzNeEIyTQEs7otuur-7jaSP5D5d-xiZ54_C6Q1VK10eEW89WT1kWPMquT3VyZsQ_6mVE_aDMRWkMuo2w8EsQ5mkCmpD1H4olLqnjFxu87ge1HyEcfVuP_mbOr8skUE_pOMq7Jyw5JV-5ZWmd4lbsxJfZ_vrsmmcxqqazGgPxzhkNy2wzmFv1oAqdGFHE0Ei"/>
+<div class="absolute bottom-6 left-6 text-primary">
+<h3 class="font-headline text-2xl">24hr Cold Brew</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Café Vibe (Instagram Feed) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="space-y-4">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-secondary-container">Inside MORLA</span>
+<h2 class="font-headline text-4xl md:text-5xl text-primary">The Coastal Aesthetic</h2>
+</div>
+<div class="font-body text-sm text-on-surface-variant flex items-center gap-2">
+                    Follow us <span class="font-semibold text-primary">@MORLACAFE</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+<div class="aspect-square overflow-hidden rounded-xl">
+<img alt="Café interior details" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx6lUO9LEHSsbhfu3tl-EW_tGi6F4Dnoi-EqzR7Wjw2xJC__nusy8WJwL-NJPL_BCahtWPwWlJwPx5mScMw-39uDUqU_vPSmxFX9oe7iEo5Wve1wePVr2HxFlIQ2zpVI2N5IY9YBN1KEDrzczPdBklWUucDIyJQmbMfw91d4jykhLySNXZsP3p64MeVvO7Yw6fRMYlWg2d2StSDlE1d5sr6zsjFYRZENsci0oWIF6CSWV1qeiIf8x4Z3loSHPjoT3vnTZ2CkGyoAcR"/>
+</div>
+<div class="aspect-square overflow-hidden rounded-xl mt-8">
+<img alt="Pastry selection" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGXeyXCUZDXLVeeUbABN6JQQv2U_e9Ncd0npzbBF89Fno-QGf4Q0UPIh-K5SCWEIaLPkdOPD5pJujpOUy-w99YYFN8ZSD3fm4biK6YGIArKTpTL7AkeX3h8Tv_xFQcKOWzkGgE8QyB15xGfR798Wr8Kj60OczTb9EUoSEhsT_G3HxLwqSstqVxs1xx-7JO7wF1QAEG281gRTJwTYyURJeY_EqMIkEFQEexFwAFy0kf0D4o2beh7V1RczsZ0T4nvGn2AlCw_XFo6dP3"/>
+</div>
+<div class="aspect-square overflow-hidden rounded-xl">
+<img alt="Coffee bean bag" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5xhqIeuSz5WV5TPtAsKN2BUZbe3HyVW2bRUcOA1mlSsU3ZArfnbCc2pIjkDmdxrB0orn0N-f7PQQHxYqqB_PufS3SiKC62V0996h79ZrRBg3A3VSqQiAcABhhnrvBPSMoifRmlhkZVbu9Pn9fxVu556A45PAjVHUQqvJAiTNEuPuQYCVlRmLHGD0fs4_GX1LrTH24Ye64p2K7Tr1pXITx5FQdKv2kDybaewQUWq5TDmcIRwp4PsZkEkUXUDxIKCTTij2j6_OGPkiN"/>
+</div>
+<div class="aspect-square overflow-hidden rounded-xl mt-8">
+<img alt="Person holding cup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYu_ISKzXdP5jlDgX7puU9WuhFG67MAVkK9FdDs30xGUFl_thYdWZ41smPAGlbk5H95xarbsdXpsKIEms4BbXfyP5FzpQnTfBlWEU0JFIyJh4GFNiW_iLz6e80FaZ3Wt6vrHhEoV-E1NlUCTLJvF-xGH2L_Pn6sszv5XpVdqfLFWWAMIei4r4Z5_Ki5DN47bL2ymy7FBdjIx00k_coWNC9wS7lN5GwtPqf2LuUUc9Ozm9XNI6WG7UfFSP86p6qT1mNQhOrvqhv7KkM"/>
+</div>
+</div>
+</div>
+</section>
+<div id="contact">
+<!-- Content Grid: Info & Form -->
+<section class="px-6 md:px-12 lg:px-24 py-32 bg-surface-container-lowest">
+<div class="lg:col-span-12 max-w-4xl mx-auto w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start text-center md:text-left">
+<div class="space-y-12">
+<h2 class="text-sm uppercase tracking-[0.3em] text-on-surface-variant mb-6 font-medium">The Destination</h2>
+<div class="space-y-8">
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60 mb-2">Location</p>
+<p class="text-2xl md:text-3xl font-serif text-primary">Azure Coast, 1202<br/>Coastal Terrace</p>
+</div>
+<div class="space-y-6 pt-4">
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60 mb-2">Speak</p>
+<p class="text-lg font-body tracking-tight">+1 (555) 892 0041</p>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60 mb-2">Write</p>
+<p class="text-lg font-body tracking-tight">hello@morla-cafe.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 md:p-12 rounded-xl text-left">
+<h2 class="text-sm uppercase tracking-[0.3em] text-on-surface-variant mb-10 font-medium">Opening Hours</h2>
+<ul class="space-y-4 text-primary font-body">
+<li class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="tracking-wide">Monday ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Friday</span>
+<span class="font-medium italic">7am - 6pm</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="tracking-wide">Saturday</span>
+<span class="font-medium italic">8am - 7pm</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="tracking-wide">Sunday</span>
+<span class="font-medium italic">8am - 7pm</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-32">
+<div class="relative w-full h-[500px] bg-surface-container rounded-xl overflow-hidden group">
+<!-- Map Placeholder Image -->
+<img class="w-full h-full object-cover grayscale opacity-60 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqT57fQRwiCriZnXGUF2UBH2buWbN6Io62BpTHqsWRbYkcIuzms-03MK9Jni3FyQMTfZe-i3gFa4BEVN_B6pdre_yTgNp6isiBvc7L0_Dscnd5tM0ATQrjvJ-ReDQkLXupsSBpqcS2Wwp8lZqjMGQxllaATsO6CmtFOu5MEVX14jY3sHx4G3OjyEAGtW8YOQqbajKNeaPWHbpLZNdcrbFp8yzFloASQBpjnostZkGQoUPDFyLkqoAmLfKQ5cdOsMvMqEYKWCfq4sy9"/>
+<!-- Floating Map Card -->
+<div class="absolute bottom-10 left-10 bg-white p-6 rounded-lg shadow-xl max-w-xs border border-outline-variant/10">
+<p class="font-serif text-lg mb-1 text-primary lowercase tracking-widest uppercase">MORLA CAFÉ</p>
+<p class="text-sm text-on-surface-variant mb-4">Find us at the edge of the terrace where the sea meets the stone.</p>
+<a class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary hover:opacity-70 transition-opacity" href="#">
+                        Get Directions 
+                        <span class="material-symbols-outlined !text-sm">north_east</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="bg-[#f4f3f1] dark:bg-slate-900 w-full py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <!-- Subtle Brand Background -->
+        <span class="text-3xl md:text-5xl font-serif font-black text-[#1E2235]/10 dark:text-white/5 uppercase tracking-[0.2em] mb-10 block text-center select-none">MORLA</span>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center gap-10 mb-10 text-[#1E2235]/60">
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="Instagram">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="TikTok">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.617a8.171 8.171 0 0 0 3.77 1.15V6.326a4.809 4.809 0 0 1-.001.36z"/></svg>
+            </a>
+            <a href="mailto:hello@morla-cafe.com" class="hover:text-[#1E2235] transition-colors" title="Email">
+                <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+        </div>
+
+        <p class="font-serif text-[10px] tracking-[0.25em] uppercase text-[#1E2235]/40 dark:text-slate-500">Â© 2024 MORLA CAFÃ‰. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+</body></html>
+
+
+
+
+
+
+
+

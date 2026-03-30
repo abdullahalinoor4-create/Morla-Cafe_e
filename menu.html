@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#64635b",
+              "on-surface-variant": "#46464c",
+              "surface-container-low": "#f4f3f1",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#8689a0",
+              "tertiary-container": "#1a242f",
+              "surface-container": "#efeeec",
+              "inverse-primary": "#c2c5de",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dee1fb",
+              "outline-variant": "#c7c5cd",
+              "on-secondary-fixed": "#1c1c16",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#d9e3f3",
+              "surface-container-high": "#e9e8e6",
+              "outline": "#77767d",
+              "secondary-fixed": "#e6e2d9",
+              "inverse-on-surface": "#f1f1ef",
+              "error": "#ba1a1a",
+              "tertiary": "#050e19",
+              "tertiary-fixed-dim": "#bdc7d7",
+              "on-tertiary-container": "#818b99",
+              "on-primary-fixed-variant": "#42465a",
+              "inverse-surface": "#2f3130",
+              "surface-variant": "#e3e2e0",
+              "on-background": "#1a1c1b",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#484740",
+              "background": "#faf9f7",
+              "secondary": "#605e57",
+              "on-primary-fixed": "#161b2d",
+              "surface-container-highest": "#e3e2e0",
+              "on-surface": "#1a1c1b",
+              "surface-tint": "#595d73",
+              "surface-dim": "#dadad8",
+              "primary-container": "#1e2235",
+              "secondary-container": "#e3dfd6",
+              "primary": "#080c1e",
+              "on-tertiary-fixed-variant": "#3e4854",
+              "surface": "#faf9f7",
+              "surface-bright": "#faf9f7",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#cac6be",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#121c27",
+              "primary-fixed-dim": "#c2c5de"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 40px -10px rgba(26, 28, 27, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
+  <div class="flex justify-between items-center px-6 md:px-10 py-5 max-w-[1400px] mx-auto">
+    <!-- Left: Logo & Wordmark -->
+    <a href="index.html" class="flex items-center gap-3 md:gap-4 text-[#1a1c29] hover:opacity-80 transition-opacity">
+      <div class="flex flex-col items-center justify-center -mt-1 opacity-80 scale-90 md:scale-100">
+        <span class="material-symbols-outlined text-[16px] leading-none mb-[1px]">park</span>
+        <span class="font-serif text-[6px] font-bold tracking-[0.2em] leading-none">MORLA</span>
+        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFÃƒâ€°</span>
+      </div>
+      <span class="font-serif text-xl md:text-2xl font-bold tracking-widest leading-none uppercase">MORLA</span>
+    </a>
+
+    <!-- Center Links (Desktop) -->
+    <div class="hidden md:flex items-center space-x-10">
+      <a href="index.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">HOME</a>
+      <a href="menu.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors text-slate-800 border-b border-slate-800 pb-1">MENU</a>
+      <a href="about.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">THE STORY</a>
+      <a href="gallery.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">GALLERY</a>
+    </div>
+
+    <!-- Right Button (Desktop) / Hamburger (Mobile) -->
+    <div class="flex items-center gap-4">
+      <button onclick="window.location.href='index.html#contact'" class="hidden md:block px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
+        CONTACT US
+      </button>
+      
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-slate-700 hover:bg-slate-50 rounded-lg transition-colors">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="flex flex-col h-full bg-slate-50 p-8 pt-24 space-y-8">
+      <button id="close-menu-button" class="absolute top-6 right-8 p-2 text-slate-700 hover:bg-white rounded-lg">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      
+      <a href="index.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">HOME</a>
+      <a href="menu.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 text-slate-900 border-b-4 border-slate-900">MENU</a>
+      <a href="about.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">THE STORY</a>
+      <a href="gallery.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">GALLERY</a>
+      
+      <button onclick="toggleMenu(); window.location.href='index.html#contact'" class="mt-8 bg-[#1E2235] text-white py-5 rounded-full text-xs font-bold tracking-[0.2em] uppercase shadow-xl">
+        CONTACT US
+      </button>
+      
+      <div class="mt-auto pb-12 flex justify-center gap-8 text-slate-400">
+        <span class="material-symbols-outlined">share</span>
+        <span class="material-symbols-outlined">mail</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const closeBtn = document.getElementById('close-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        setTimeout(() => menu.classList.remove('translate-x-full'), 10);
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    
+    // Close menu on link click
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Header -->
+<header class="max-w-7xl mx-auto px-6 md:px-8 mb-24 text-center">
+<h1 class="font-headline text-4xl md:text-7xl text-primary mb-6 tracking-tight">The Culinary Menu</h1>
+<p class="font-body text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">A curated selection of artisanal brews and coastal-inspired delicacies, crafted with seasonal ingredients and a devotion to ritual.</p>
+</header>
+<!-- Menu Section: Specialty Coffee -->
+<section class="max-w-7xl mx-auto px-6 md:px-8 mb-32">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline text-3xl text-primary italic">Specialty Coffee</h2>
+<div class="h-[1px] flex-grow mx-8 bg-outline-variant/15"></div>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-secondary-container">The Morning Ritual</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Item 1 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a perfectly poured latte with intricate heart-shaped foam art in a ceramic cup on a weathered wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC28_4rliJ6sf2j5qgYavYJdE1M9nQj5d-mXkdkxbEvzJOxgHdXFFPmK4oSSA21IMuv7fbVE7g1ZO_k8v5iUJg1NZJC4pxOdQU5Jj1pRv6BL9rKgjMw_eRB0F0WS1p_JDj1Nib-LHxCoOpGllUbIMEW0uHZ783cCNL7oWovmonv8HNKijH3XZXuvroI9NbWNga2Dx8-zCrFKxSBsz_LIGKleR7IHiRmJJqSArdk1UPyFf7un1dpqg31Z4vMBMaDHxwVWqZZCMzZ_waU"/>
+</div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline text-xl text-primary">Velvet Flat White</h3>
+<span class="font-label text-sm font-medium text-primary-container">$5.50</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed tracking-wide">Double shot of our signature coastal blend with micro-foamed local organic milk.</p>
+</div>
+<!-- Item 2 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700" data-alt="Elegant glass of pour-over coffee sitting on a marble counter with soft morning sunlight creating long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO6nl7bTJLO4AH4r21K47UwOG0GyY44s6MS7uU4GSrwpiGw4C8_wig8r75J3GXyKDhTaRrvFyxvmRTRnK51s8WgIq7LUXGoRuG3i5MDuhdawlb4lyw7mwdxUJcyy2-pxSpUTsp4Mm7dXG2sUVGfJjsLwFg2ifa_iDgipYbcSOWFAFW2-_JFD8d0pdzJU8936G68nL-8G0i5ehX4UUztLlKVCLejjOa9Cvj2r-xSGgkzUHwj0ccS0uM4mG2ZFc8Ix4tqCNrbTQ9ej5F"/>
+</div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline text-xl text-primary">Origin Pour Over</h3>
+<span class="font-label text-sm font-medium text-primary-container">$6.75</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed tracking-wide">Single-origin beans from Ethiopia, featuring bright notes of jasmine and bergamot.</p>
+</div>
+<!-- Item 3 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6 bg-surface-dim">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a cortado in a small glass on a dark coaster with a single roasted coffee bean on the side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBua2ogftMDTxY0BbJfHEZe0ctYGkdVqDboyfdZeorJMDFhDpdo1qxcekzXTUavsJK11uQiu9U8lGqy91fqsL09Kgh2e1jDpB-tnTVSl8JA0dutlVGxhaNWHJHWACIVuXzV6xfvbD6jwlX8cMVxIzP3S0Gh8GM3fKPCRV-vNyR4zzC7QM4xjentArlL_ekdrSdZCgxbjWGNWPaHZNX0VVYknPRtZN4DF9JliW8a2zJ4n1l_5Z6G_AemtqNFK9kq9k3qy_dBoJGMImZ9"/>
+</div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline text-xl text-primary">Morla Cortado</h3>
+<span class="font-label text-sm font-medium text-primary-container">$4.25</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed tracking-wide">Equal parts espresso and steamed milk for a balanced, punchy afternoon revival.</p>
+</div>
+</div>
+</section>
+<!-- Menu Section: Refreshing Brews -->
+<section class="bg-surface-container-low py-24 mb-32">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+<div class="flex items-center justify-between mb-16">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-secondary-container">Cold &amp; Crisp</span>
+<div class="h-[1px] flex-grow mx-8 bg-outline-variant/15"></div>
+<h2 class="font-headline text-3xl text-primary italic">Refreshing Brews</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Asymmetric Layout Item -->
+<div class="flex flex-col md:flex-row gap-8 items-center bg-surface-container-lowest p-8 rounded-xl editorial-shadow">
+<div class="w-full md:w-1/2 aspect-square rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A tall glass of iced cold brew coffee with swirling milk and condensation on the glass against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9el3uTEu0gULPV0VbSjD32rR0vQfnTSMOJrWRgpRYMzNety5lef4qEaIb8b6uY5YMbh4xqnHdtiAgXuoYLQmDmNfVTpWH0TeExcnrizL9h1WIuzYUnFUoC2c2hq85cgs2ILHfvP_MqG2hzOrlxsa0wn2eyCf28t00uVbTqkNPZ7FY69tuFqhmLvo-2t9cV4nJK1L6I6NpcnR7yvV1jf6iMw4wDb7yVt57z6uzTiTo2_p5XMze0U-LLg-ZXiKaZeTWqyfOdbjypTMw"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-on-primary-container mb-4 block">Summer Classic</span>
+<h3 class="font-headline text-2xl text-primary mb-3">Midnight Cold Brew</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6 italic">Steeped for 18 hours, serving a smooth chocolatey finish with zero acidity.</p>
+<span class="font-label text-lg text-primary">$6.50</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center bg-surface-container-lowest p-8 rounded-xl editorial-shadow">
+<div class="w-full md:w-1/2 aspect-square rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Artisanal glass of iced matcha latte with vibrant green layers and ice cubes reflecting the afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBARUgBWjhiKjw5NiDlzQSFsZOVU6zZVJLoluop1DWEHGFeAMLpovnDJ8XxS0If7fh6Dw5ZW1W0kJ1aZr4rPX0UMgZxFHK2jqK43pyZPibu2Ujx-xsTRXi3jML1-9zK53GtIW2qt2QytrHvOWJeiDG-Lbb-XBVZhsfEPpxe_ldUkczicfEWBPfJ7Ra13FCD1gyvsuRdZI1YjGNa62Wfc68VYintMng3_LiymiEFvFlil9VEHN_IXVt7-hZqKPNnT5Aa6y7yxiCW8puU"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-on-primary-container mb-4 block">Ceremonial Grade</span>
+<h3 class="font-headline text-2xl text-primary mb-3">Iced Coastal Matcha</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6 italic">Premium Uji matcha whisked with oat milk and a touch of agave nectar.</p>
+<span class="font-label text-lg text-primary">$7.25</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section: Artisanal Pastries -->
+<section class="max-w-7xl mx-auto px-6 md:px-8">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline text-3xl text-primary italic">Artisanal Pastries</h2>
+<div class="h-[1px] flex-grow mx-8 bg-outline-variant/15"></div>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-secondary-container">Baked Fresh Daily</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Pastry Item 1 -->
+<div class="bg-surface p-4 group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Close-up of a flaky golden croissant with visible layers on a minimalist white ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqKGSO-qUW7NfT5-LaFDjyq4CeON7IzGMIF75hMpO-JGc3mZNXo9DnaMkdQJ8poCWUznQvEWpV8zFMMh3tS1tkMtuL33iUxXiD5RjJ8a4XkyVWcgdiUtxUlQ00vdNZiOo_pCmfrpypBCTExHYzUs0S5tOyzb38PCAK1JlCkYkm8tEMgi5xNx2Cra_nxii013aF2Ll1gRf_a8nk7eczfiJ_VnFngmY_D5LLIfQugf7wJVMW-YIj9L0fIHCnjrA-LNId_Y1BvlvQv_iy"/>
+</div>
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-headline text-lg text-primary">Sea Salt Croissant</h4>
+<span class="text-sm font-label text-on-primary-container">$4.50</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant tracking-wider">Flaky, buttery layers with a hint of Maldon salt.</p>
+</div>
+<!-- Pastry Item 2 -->
+<div class="bg-surface p-4 group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Danish pastry topped with fresh raspberries and cream sitting on a wooden cutting board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt86X3Hc64hpWXJ3vMoK6JRSUvXCJqxdsk6QVigPdIJWSozh2QZdcLnYuj0GYztc2vnGoLquEU8OKuHqifY2EHsbTD1fDGrr8LYF3bweqdeAGoyhyJQrinLxKdjiNT_2cGMgWsiXHASqs9RhCwv8ZTiVIuxG7PaZv1GM3QZS6XJ6sC5t5Jv5HPtnKiMRgRGfWpKpte6JWxqMWVowy-CUnz8SGdj47wvO0E1h0E5fB38radtmktrZvSBHNr_rtbArGizm8MFsUsKpOo"/>
+</div>
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-headline text-lg text-primary">Wild Berry Danish</h4>
+<span class="text-sm font-label text-on-primary-container">$5.75</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant tracking-wider">Seasonal berries nestled in vanilla custard.</p>
+</div>
+<!-- Pastry Item 3 -->
+<div class="bg-surface p-4 group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Deep dark chocolate brownie with a dusting of cocoa powder and visible salt flakes on top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGTabCVfINC48adg90OobzmUGwbRTrgG1UZ1jaUwDL7V6TXEh45zPpQB_H-5XA4_wdZIo7tVvT6AiJfBq0kvSjtV-3IliB1sTogfcJA8gRDaxW6J0FeXl4My1nN2p7qe0FhsMyBf5MV229R-lbMMIfsOcIrpjh7eGhgFKARj84iMEEyimcSZb0tp6TFGp76bCxe6uKENOtDnEPvxFENDLRWnWZmi-0b3HS7xCyjvM6puDVOwgNrO7JCw19szUbaSxhU9D596ePAgB0"/>
+</div>
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-headline text-lg text-primary">Tahini Brownie</h4>
+<span class="text-sm font-label text-on-primary-container">$6.00</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant tracking-wider">70% dark chocolate with a nutty tahini swirl.</p>
+</div>
+<!-- Pastry Item 4 -->
+<div class="bg-surface p-4 group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Slices of thick sourdough toast topped with smashed avocado and decorative microgreens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy_OgUrhFVv3q1bM54xJQQ7GpvEL9XmDlGmLvUUTJIEhwE0hjs1ulMv_NAUlq2snis6yb8mFE9zz9O41x5IzV8e-4MlbUAfjGRTkuwHu2J13rpkWybjydFJ5MtZ3ihRppiDf8gFmeR7WrBcWRWcv5jVWTAdE7DqvN_Ac4oFI-AmDwDTW6eK2Y2J65Ja8fcaitfAaIQtt2ZSZl5AxfHYS90dkO5xPYqrS2wVt4uSXncGE2917iwUOb9l42bUm8-ooD08ESC8BOFMETL"/>
+</div>
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-headline text-lg text-primary">Avocado Tartine</h4>
+<span class="text-sm font-label text-on-primary-container">$14.00</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant tracking-wider">House-baked sourdough with heirloom radish.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f3f1] dark:bg-slate-900 w-full py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <!-- Subtle Brand Background -->
+        <span class="text-3xl md:text-5xl font-serif font-black text-[#1E2235]/10 dark:text-white/5 uppercase tracking-[0.2em] mb-10 block text-center select-none">MORLA</span>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center gap-10 mb-10 text-[#1E2235]/60">
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="Instagram">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="TikTok">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.617a8.171 8.171 0 0 0 3.77 1.15V6.326a4.809 4.809 0 0 1-.001.36z"/></svg>
+            </a>
+            <a href="mailto:hello@morla-cafe.com" class="hover:text-[#1E2235] transition-colors" title="Email">
+                <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+        </div>
+
+        <p class="font-serif text-[10px] tracking-[0.25em] uppercase text-[#1E2235]/40 dark:text-slate-500">Â© 2024 MORLA CAFÃ‰. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+</body></html>
+
+
+
+
+
+
+

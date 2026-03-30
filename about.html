@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e9e8e6",
+              "on-tertiary-container": "#818b99",
+              "inverse-on-surface": "#f1f1ef",
+              "secondary-fixed-dim": "#cac6be",
+              "tertiary-fixed-dim": "#bdc7d7",
+              "tertiary-container": "#1a242f",
+              "primary-container": "#1e2235",
+              "secondary-container": "#e3dfd6",
+              "on-primary-container": "#8689a0",
+              "surface": "#faf9f7",
+              "on-secondary-container": "#64635b",
+              "on-primary-fixed-variant": "#42465a",
+              "inverse-surface": "#2f3130",
+              "surface-tint": "#595d73",
+              "primary": "#080c1e",
+              "outline-variant": "#c7c5cd",
+              "surface-container-low": "#f4f3f1",
+              "on-tertiary-fixed-variant": "#3e4854",
+              "on-primary-fixed": "#161b2d",
+              "surface-container-highest": "#e3e2e0",
+              "on-secondary-fixed": "#1c1c16",
+              "tertiary": "#050e19",
+              "primary-fixed": "#dee1fb",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#c2c5de",
+              "background": "#faf9f7",
+              "on-tertiary-fixed": "#121c27",
+              "inverse-primary": "#c2c5de",
+              "surface-variant": "#e3e2e0",
+              "surface-container": "#efeeec",
+              "outline": "#77767d",
+              "on-error": "#ffffff",
+              "surface-dim": "#dadad8",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1a1c1b",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "secondary": "#605e57",
+              "surface-bright": "#faf9f7",
+              "on-surface-variant": "#46464c",
+              "on-background": "#1a1c1b",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#d9e3f3",
+              "secondary-fixed": "#e6e2d9",
+              "on-secondary-fixed-variant": "#484740"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-on-scroll {
+        transition: background-color 0.4s ease;
+      }
+      .editorial-shadow {
+        box-shadow: 0 10px 40px -10px rgba(26, 28, 27, 0.04);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
+  <div class="flex justify-between items-center px-6 md:px-10 py-5 max-w-[1400px] mx-auto">
+    <!-- Left: Logo & Wordmark -->
+    <a href="index.html" class="flex items-center gap-3 md:gap-4 text-[#1a1c29] hover:opacity-80 transition-opacity">
+      <div class="flex flex-col items-center justify-center -mt-1 opacity-80 scale-90 md:scale-100">
+        <span class="material-symbols-outlined text-[16px] leading-none mb-[1px]">park</span>
+        <span class="font-serif text-[6px] font-bold tracking-[0.2em] leading-none">MORLA</span>
+        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFÃƒâ€°</span>
+      </div>
+      <span class="font-serif text-xl md:text-2xl font-bold tracking-widest leading-none uppercase">MORLA</span>
+    </a>
+
+    <!-- Center Links (Desktop) -->
+    <div class="hidden md:flex items-center space-x-10">
+      <a href="index.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">HOME</a>
+      <a href="menu.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">MENU</a>
+      <a href="about.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors text-slate-800 border-b border-slate-800 pb-1">THE STORY</a>
+      <a href="gallery.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">GALLERY</a>
+    </div>
+
+    <!-- Right Button (Desktop) / Hamburger (Mobile) -->
+    <div class="flex items-center gap-4">
+      <button onclick="window.location.href='index.html#contact'" class="hidden md:block px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
+        CONTACT US
+      </button>
+      
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-slate-700 hover:bg-slate-50 rounded-lg transition-colors">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="flex flex-col h-full bg-slate-50 p-8 pt-24 space-y-8">
+      <button id="close-menu-button" class="absolute top-6 right-8 p-2 text-slate-700 hover:bg-white rounded-lg">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      
+      <a href="index.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">HOME</a>
+      <a href="menu.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">MENU</a>
+      <a href="about.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 text-slate-900 border-b-4 border-slate-900">THE STORY</a>
+      <a href="gallery.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">GALLERY</a>
+      
+      <button onclick="toggleMenu(); window.location.href='index.html#contact'" class="mt-8 bg-[#1E2235] text-white py-5 rounded-full text-xs font-bold tracking-[0.2em] uppercase shadow-xl">
+        CONTACT US
+      </button>
+      
+      <div class="mt-auto pb-12 flex justify-center gap-8 text-slate-400">
+        <span class="material-symbols-outlined">share</span>
+        <span class="material-symbols-outlined">mail</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const closeBtn = document.getElementById('close-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        setTimeout(() => menu.classList.remove('translate-x-full'), 10);
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    
+    // Close menu on link click
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('translate-x-full');
+        setTimeout(() => menu.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative w-full h-[70vh] md:h-[870px] flex items-center justify-center overflow-hidden px-6">
+<div class="absolute inset-0 z-0">
+<img alt="Morla Cafe Interior" class="w-full h-full object-cover" data-alt="Luxurious minimalist café interior with stone textures, warm wood accents, and soft morning light streaming through large windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxMQnYWl6iPzhaBliemKZ4tpbjCprwysT5Bsq1Zpo9WRM4_U0wO133DpCvrQn1X74Wq_gby5oWyYkW545ZAKgyGznraudJQ_JpYjx2j85msYsKQwFBtLthQ5eNPNK1TO2hCP-GkyF6-z02B67S9UO_615xwAbX42dRUZEPjgt6QPgp0YLFeMyOjBL32a_8DtYxG_M-5zYRohY5MwR9DIcFKSGjqAsxXQWambJmq5DCPQGZjpwHgXtrEOe66PAeRZNQtyhWOZgZznNG"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl">
+<h1 class="font-headline text-4xl md:text-8xl text-white font-black tracking-tight leading-tight">
+                    Where Every Bean <br/> Tells a Story.
+                </h1>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-32 px-6 md:px-8 max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline text-primary-container text-4xl md:text-5xl font-bold leading-tight">Guided by the Craft <br/> of Ritual</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+At Morla, we believe that coffee is more than a caffeine ritual; it is a moment of pause. Nestled along the azure coast, our café serves as a sanctuary for those who appreciate the slower rhythms of life.
+                    </p>
+</div>
+<div class="space-y-10">
+<div class="flex items-start gap-6">
+<div class="bg-surface-container-low p-4 rounded-xl text-primary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="eco">eco</span>
+</div>
+<div>
+<h4 class="font-label font-bold text-primary-container tracking-wider uppercase text-xs mb-1">Ethical Sourcing</h4>
+<p class="text-on-surface-variant text-sm">Direct partnerships with small-scale farmers who honor the earth.</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-surface-container-low p-4 rounded-xl text-primary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="font-label font-bold text-primary-container tracking-wider uppercase text-xs mb-1">Precision Roasting</h4>
+<p class="text-on-surface-variant text-sm">Scientific accuracy meeting artistic intuition in every small batch.</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-surface-container-low p-4 rounded-xl text-primary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 class="font-label font-bold text-primary-container tracking-wider uppercase text-xs mb-1">Community Hearth</h4>
+<p class="text-on-surface-variant text-sm">A shared space where coastal stories are told and memories are made.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden editorial-shadow">
+<img alt="Coffee Pour" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Extreme close up of a barista pouring steamed milk into a ceramic cup creating intricate latte art with soft depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjmDhDDvy9OYaRi9O_jTqL8Nt7QI2yK0EfnpxApJ_ZLsg5MaaemjBZg1GoWYhDu4saVRuGRjqAXVrBV9btNfgHvR5k6WRHSVpOjzHY3SFNqwLS-eOPz91CIRZjLPePD2EfY9ZQuK3_agtFJwLVAPYSeNZpXJgtusf-9iw33Qn8PuEj4BSY3R-E_EYjpB5-nV41ImDz1XbRysG9d7IUp2tP_PXvJSXX_OXUlRMooQfD2-GscGmqL7yxWvH246bkAwybMeuN-EnpN5dd"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-surface-container-lowest p-10 editorial-shadow rounded-xl max-w-xs hidden lg:block">
+<p class="font-headline italic text-primary-container text-xl italic leading-relaxed">
+                        "Crafted with patience and coastal serenity."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="bg-surface-container-low py-32 px-6 md:px-8">
+<div class="max-w-4xl mx-auto text-center space-y-8">
+<span class="material-symbols-outlined text-primary-container/20 text-6xl" data-icon="format_quote">format_quote</span>
+<h3 class="font-headline text-primary-container text-3xl md:text-6xl font-medium italic leading-tight">
+                    "The perfect cup isn't made; it's nurtured."
+                </h3>
+<div class="flex flex-col items-center space-y-2 pt-6">
+<div class="w-12 h-px bg-outline-variant"></div>
+<p class="font-label tracking-[0.2em] text-xs font-bold text-primary-container">ELENA MORLA</p>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-32 px-6 md:px-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<h2 class="font-headline text-primary-container text-4xl font-bold">Captured Moments</h2>
+<p class="text-on-surface-variant max-w-md">Witness the daily dance of light and shadow in our coastal sanctuary.</p>
+</div>
+<div class="text-xs font-bold tracking-widest text-primary-container uppercase border-b border-primary-container/10 pb-2">
+                    Follow @MORLACAFE
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="aspect-square rounded-xl overflow-hidden editorial-shadow group">
+<img alt="Latte Art" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Top down view of a perfect rosetta latte art in a textured stone cup on a rustic wood table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJRd4Qouq-3OM0PA-koK4wV1j2_sGO5nH7t4PtlphrPAoajC403A-3Ld5e3YA00cYGI0Vds5MULy6tASOawEz7j_Pwgc4iafj5EtYxEi-0EtQVX40pDVllGVqAK9J4uGJJLZHHynQNRuYuYOVN2Rrg_Pkv4F_lqXpO44KLlshPQGavpYhoILU7FX3xaIw39jwGLD4s66h524RP7uiXTJSJGXIXB8lxklE23ojTPGDTjXexCSYX6Rt2DTWY__My-JPJQ7XANNZPmxwY"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden editorial-shadow group lg:translate-y-12">
+<img alt="Coffee Roasting" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Artisan coffee roaster checking coffee beans for color and consistency with steam and warm light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSXnDm_TooY0xRsYn0a1k_WgKPtuOJaXaOvdunB-tLbvqSohCEVKfcr47i3YgXdQjh3ebawRfzAURHedqOT3N-O9_S3AqLEGqW8XhqsxG79FycEQkMAbnE75DD9QgwvtyhJhZ4FpyNUF7_x_X4tVqeEzRwZL2I7C4NkC4G-us8nzKVPLUxMltGiuAdvyrJVgIkTE1qq4BkF0IP3fNKlGSu1s124P7i-t8sDIrD2B3ZYYWVPTkCS8vVYZTMTlCB2BOME-x2dRRAjq8n"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden editorial-shadow group">
+<img alt="People Reading" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A person sitting by a large coastal window reading a vintage book with a warm cup of coffee nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgFGfJTeYGGmRdCAG1fhR80LHq4I5PRVVBVKKr6Nh7Z3Xul6gggj2SoOXdzGBB9votl9C5Re0J1spjCOiMlMAUs1ZhOfzpipw18tJj4Otfb5vl5z0Z_I_d05D_sVF5MhewR6qQS2cQvvUy75_GOQ6FggnOzTEqlb5zhHDegir4VyAYBQ_krvf28nvCHj5CwGT2lENCWO1s9wLKsG2jYUg57Pn5vSwPVvwOh4H_-Y5BFH8_RYDPtfQT6viLeulsqYd63rbHEmjO3585"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden editorial-shadow group lg:translate-y-12">
+<img alt="Cafe Exterior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Exterior shot of a minimalist cafe with white stone walls, olive trees, and outdoor wicker seating overlooking the ocean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGWgp4VQX1fTA2_KLD6m6vKBzT3A4-8CxMxhbEx2FaoHgRiYcpMJF1eKb1hmc77_wE4sCFO4AAGGcbNCEtvEZ5JYuYea_DQuY4x6oYLGKM6h699lhgNRUyvjE5XP_MQUAXjxvP24zlhjuJi93MJU0gGm6I2jXorh9_SAUAYeVfX0lvE9g7CEd_-fvaE5ALK8cxvKDLT6lJWZv4XVGE2UrU1XqY5qRqUyzK41o5dKC58E_b9qzgnEA-kL2dRAHIac0xdzItNVfqVXVW"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f3f1] dark:bg-slate-900 w-full py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <!-- Subtle Brand Background -->
+        <span class="text-3xl md:text-5xl font-serif font-black text-[#1E2235]/10 dark:text-white/5 uppercase tracking-[0.2em] mb-10 block text-center select-none">MORLA</span>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center gap-10 mb-10 text-[#1E2235]/60">
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="Instagram">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="hover:text-[#1E2235] transition-colors" title="TikTok">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.617a8.171 8.171 0 0 0 3.77 1.15V6.326a4.809 4.809 0 0 1-.001.36z"/></svg>
+            </a>
+            <a href="mailto:hello@morla-cafe.com" class="hover:text-[#1E2235] transition-colors" title="Email">
+                <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+        </div>
+
+        <p class="font-serif text-[10px] tracking-[0.25em] uppercase text-[#1E2235]/40 dark:text-slate-500">Â© 2024 MORLA CAFÃ‰. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+</body></html>
+
+
+
+
+
+
+
