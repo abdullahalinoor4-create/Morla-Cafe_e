@@ -86,18 +86,18 @@
 <body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-primary">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
-  <div class="flex justify-between items-center px-6 md:px-10 py-5 max-w-[1400px] mx-auto">
+  <div class="flex justify-between items-center px-10 py-5 max-w-[1400px] mx-auto">
     <!-- Left: Logo & Wordmark -->
-    <a href="index.html" class="flex items-center gap-3 md:gap-4 text-[#1a1c29] hover:opacity-80 transition-opacity">
-      <div class="flex flex-col items-center justify-center -mt-1 opacity-80 scale-90 md:scale-100">
+    <a href="index.html" class="flex items-center gap-4 text-[#1a1c29] hover:opacity-80 transition-opacity">
+      <div class="flex flex-col items-center justify-center -mt-1 opacity-80">
         <span class="material-symbols-outlined text-[16px] leading-none mb-[1px]">park</span>
         <span class="font-serif text-[6px] font-bold tracking-[0.2em] leading-none">MORLA</span>
-        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFÃƒâ€°</span>
+        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFÃ‰</span>
       </div>
-      <span class="font-serif text-xl md:text-2xl font-bold tracking-widest leading-none uppercase">MORLA</span>
+      <span class="font-serif text-2xl font-bold tracking-widest leading-none uppercase">MORLA</span>
     </a>
 
-    <!-- Center Links (Desktop) -->
+    <!-- Center Links -->
     <div class="hidden md:flex items-center space-x-10">
       <a href="index.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">HOME</a>
       <a href="menu.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">MENU</a>
@@ -105,93 +105,34 @@
       <a href="gallery.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">GALLERY</a>
     </div>
 
-    <!-- Right Button (Desktop) / Hamburger (Mobile) -->
-    <div class="flex items-center gap-4">
-      <button onclick="window.location.href='index.html#contact'" class="hidden md:block px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
+    <!-- Right Button -->
+    <div class="flex items-center">
+      <button onclick="window.location.href='index.html#contact'" class="px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
         CONTACT US
-      </button>
-      
-      <!-- Hamburger Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-slate-700 hover:bg-slate-50 rounded-lg transition-colors">
-        <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
   </div>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-    <div class="flex flex-col h-full bg-slate-50 p-8 pt-24 space-y-8">
-      <button id="close-menu-button" class="absolute top-6 right-8 p-2 text-slate-700 hover:bg-white rounded-lg">
-        <span class="material-symbols-outlined text-3xl">close</span>
-      </button>
-      
-      <a href="index.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">HOME</a>
-      <a href="menu.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">MENU</a>
-      <a href="about.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 text-slate-900 border-b-4 border-slate-900">THE STORY</a>
-      <a href="gallery.html" class="font-serif text-4xl font-bold tracking-widest text-[#1a1c29] border-b border-slate-200 pb-4 ">GALLERY</a>
-      
-      <button onclick="toggleMenu(); window.location.href='index.html#contact'" class="mt-8 bg-[#1E2235] text-white py-5 rounded-full text-xs font-bold tracking-[0.2em] uppercase shadow-xl">
-        CONTACT US
-      </button>
-      
-      <div class="mt-auto pb-12 flex justify-center gap-8 text-slate-400">
-        <span class="material-symbols-outlined">share</span>
-        <span class="material-symbols-outlined">mail</span>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const menuBtn = document.getElementById('mobile-menu-button');
-    const closeBtn = document.getElementById('close-menu-button');
-    const menu = document.getElementById('mobile-menu');
-
-    function toggleMenu() {
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        setTimeout(() => menu.classList.remove('translate-x-full'), 10);
-        document.body.style.overflow = 'hidden';
-      } else {
-        menu.classList.add('translate-x-full');
-        setTimeout(() => menu.classList.add('hidden'), 300);
-        document.body.style.overflow = '';
-      }
-    }
-
-    menuBtn.addEventListener('click', toggleMenu);
-    closeBtn.addEventListener('click', toggleMenu);
-    
-    // Close menu on link click
-    const menuLinks = menu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('translate-x-full');
-        setTimeout(() => menu.classList.add('hidden'), 300);
-        document.body.style.overflow = '';
-      });
-    });
-  </script>
 </nav>
 <main class="pt-24">
 <!-- Hero Section -->
-<section class="relative w-full h-[70vh] md:h-[870px] flex items-center justify-center overflow-hidden px-6">
+<section class="relative w-full h-[870px] flex items-center justify-center overflow-hidden px-6">
 <div class="absolute inset-0 z-0">
-<img alt="Morla Cafe Interior" class="w-full h-full object-cover" data-alt="Luxurious minimalist café interior with stone textures, warm wood accents, and soft morning light streaming through large windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxMQnYWl6iPzhaBliemKZ4tpbjCprwysT5Bsq1Zpo9WRM4_U0wO133DpCvrQn1X74Wq_gby5oWyYkW545ZAKgyGznraudJQ_JpYjx2j85msYsKQwFBtLthQ5eNPNK1TO2hCP-GkyF6-z02B67S9UO_615xwAbX42dRUZEPjgt6QPgp0YLFeMyOjBL32a_8DtYxG_M-5zYRohY5MwR9DIcFKSGjqAsxXQWambJmq5DCPQGZjpwHgXtrEOe66PAeRZNQtyhWOZgZznNG"/>
+<img alt="Morla Cafe Interior" class="w-full h-full object-cover" data-alt="Luxurious minimalist cafÃ© interior with stone textures, warm wood accents, and soft morning light streaming through large windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxMQnYWl6iPzhaBliemKZ4tpbjCprwysT5Bsq1Zpo9WRM4_U0wO133DpCvrQn1X74Wq_gby5oWyYkW545ZAKgyGznraudJQ_JpYjx2j85msYsKQwFBtLthQ5eNPNK1TO2hCP-GkyF6-z02B67S9UO_615xwAbX42dRUZEPjgt6QPgp0YLFeMyOjBL32a_8DtYxG_M-5zYRohY5MwR9DIcFKSGjqAsxXQWambJmq5DCPQGZjpwHgXtrEOe66PAeRZNQtyhWOZgZznNG"/>
 <div class="absolute inset-0 bg-primary/20"></div>
 </div>
 <div class="relative z-10 text-center max-w-4xl">
-<h1 class="font-headline text-4xl md:text-8xl text-white font-black tracking-tight leading-tight">
+<h1 class="font-headline text-5xl md:text-8xl text-white font-black tracking-tight leading-tight">
                     Where Every Bean <br/> Tells a Story.
                 </h1>
 </div>
 </section>
 <!-- Story Section -->
-<section class="py-32 px-6 md:px-8 max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<section class="py-32 px-8 max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 <div class="space-y-12">
 <div class="space-y-6">
 <h2 class="font-headline text-primary-container text-4xl md:text-5xl font-bold leading-tight">Guided by the Craft <br/> of Ritual</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
-At Morla, we believe that coffee is more than a caffeine ritual; it is a moment of pause. Nestled along the azure coast, our café serves as a sanctuary for those who appreciate the slower rhythms of life.
+                        At Morla, we believe that coffee is more than a caffeine ritual; it is a moment of pause. Nestled along the azure coast, our cafÃ© serves as a sanctuary for those who appreciate the slower rhythms of life.
                     </p>
 </div>
 <div class="space-y-10">
@@ -236,10 +177,10 @@ At Morla, we believe that coffee is more than a caffeine ritual; it is a moment 
 </div>
 </section>
 <!-- Philosophy Section -->
-<section class="bg-surface-container-low py-32 px-6 md:px-8">
+<section class="bg-surface-container-low py-32 px-8">
 <div class="max-w-4xl mx-auto text-center space-y-8">
 <span class="material-symbols-outlined text-primary-container/20 text-6xl" data-icon="format_quote">format_quote</span>
-<h3 class="font-headline text-primary-container text-3xl md:text-6xl font-medium italic leading-tight">
+<h3 class="font-headline text-primary-container text-4xl md:text-6xl font-medium italic leading-tight">
                     "The perfect cup isn't made; it's nurtured."
                 </h3>
 <div class="flex flex-col items-center space-y-2 pt-6">
@@ -249,7 +190,7 @@ At Morla, we believe that coffee is more than a caffeine ritual; it is a moment 
 </div>
 </section>
 <!-- Gallery Section -->
-<section class="py-32 px-6 md:px-8 max-w-screen-2xl mx-auto">
+<section class="py-32 px-8 max-w-screen-2xl mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
 <div class="space-y-4">
 <h2 class="font-headline text-primary-container text-4xl font-bold">Captured Moments</h2>
@@ -279,7 +220,7 @@ At Morla, we believe that coffee is more than a caffeine ritual; it is a moment 
 <footer class="bg-[#f4f3f1] dark:bg-slate-900 w-full py-12 px-6">
     <div class="max-w-7xl mx-auto flex flex-col items-center">
         <!-- Subtle Brand Background -->
-        <span class="text-3xl md:text-5xl font-serif font-black text-[#1E2235]/10 dark:text-white/5 uppercase tracking-[0.2em] mb-10 block text-center select-none">MORLA</span>
+        <span class="text-4xl md:text-6xl font-serif font-black text-[#1E2235]/10 dark:text-white/5 uppercase tracking-[0.2em] mb-10 block text-center select-none">MORLA</span>
         
         <!-- Social Icons -->
         <div class="flex items-center gap-10 mb-10 text-[#1E2235]/60">
