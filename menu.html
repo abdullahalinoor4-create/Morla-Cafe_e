@@ -91,25 +91,37 @@
       <div class="flex flex-col items-center justify-center -mt-1 opacity-80">
         <span class="material-symbols-outlined text-[16px] leading-none mb-[1px]">park</span>
         <span class="font-serif text-[6px] font-bold tracking-[0.2em] leading-none">MORLA</span>
-        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFÃ‰</span>
+        <span class="font-sans text-[4px] font-light tracking-[0.3em] uppercase leading-none mt-[1px] ml-[1px]" style="font-family: 'Inter', sans-serif;">CAFE°</span>
       </div>
       <span class="font-serif text-2xl font-bold tracking-widest leading-none uppercase">MORLA</span>
     </a>
 
     <!-- Center Links -->
     <div class="hidden md:flex items-center space-x-10">
-      <a href="index.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">HOME</a>
-      <a href="menu.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors text-slate-800 border-b border-slate-800 pb-1">MENU</a>
-      <a href="about.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">THE STORY</a>
-      <a href="gallery.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors ">GALLERY</a>
+      <a href="index.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors text-slate-800 border-b border-slate-800 pb-1">HOME</a>
+      <a href="menu.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors">MENU</a>
+      <a href="about.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors">THE STORY</a>
+      <a href="gallery.html" class="font-sans text-[11px] font-bold text-slate-500 hover:text-slate-800 tracking-[0.15em] uppercase transition-colors">GALLERY</a>
     </div>
 
-    <!-- Right Button -->
-    <div class="flex items-center">
-      <button onclick="window.location.href='index.html#contact'" class="px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
+    <!-- Right Button + Mobile Menu Button -->
+    <div class="flex items-center gap-4">
+      <button onclick="window.location.href='index.html#contact'" class="hidden md:inline-flex px-7 py-2.5 rounded-full border border-slate-400 text-slate-700 text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-slate-50 transition-colors">
         CONTACT US
       </button>
+
+      <button type="button" class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
     </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-6 pb-4">
+    <a href="index.html" class="block py-3 text-sm uppercase tracking-[0.2em] text-slate-800">HOME</a>
+    <a href="menu.html" class="block py-3 text-sm uppercase tracking-[0.2em] text-slate-800">MENU</a>
+    <a href="about.html" class="block py-3 text-sm uppercase tracking-[0.2em] text-slate-800">THE STORY</a>
+    <a href="gallery.html" class="block py-3 text-sm uppercase tracking-[0.2em] text-slate-800">GALLERY</a>
+    <a href="index.html#contact" class="block py-3 text-sm uppercase tracking-[0.2em] text-slate-800">CONTACT US</a>
   </div>
 </nav>
 <main class="pt-32 pb-24">
